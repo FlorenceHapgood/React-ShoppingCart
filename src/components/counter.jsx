@@ -2,14 +2,22 @@ import React, { Component } from 'react';
 
 class Counter extends Component {
   state = {
-    count: 0,
+    count: 0
   };
+
+  handleIncrement = () => {
+    console.log("Increment clicked");
+  }
 
   render() {
     return (
       <React.Fragment>
         <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
-        <button className="btn btn-secondary btn-sm">Increment</button>
+        <button
+        onClick={this.handleIncrement}
+        className="btn btn-secondary btn-sm">
+        Increment
+        </button>
       </React.Fragment>
     );
   }
@@ -25,7 +33,5 @@ class Counter extends Component {
     return classes;
   }
 }
-
-
 
 export default Counter;
