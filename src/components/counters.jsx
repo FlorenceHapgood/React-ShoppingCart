@@ -11,6 +11,15 @@ class Counters extends Component {
     ]
   };
 
+
+  handleIncrement = counter => { //counter is passed as an argument
+    const counters = [...this.state.counters] //we can't change state directly
+    const index = counters.indexOf(counter) // because counter is an argument
+    counters[index] = {...counter}
+    counters[index].value++;
+    this.setState({ counters});
+  }
+
   handleDelete = counterId => {
     const counters = this.state.counters.filter(c => c.id !== counterId);
     this.setState({counters: counters});
@@ -23,6 +32,7 @@ class Counters extends Component {
           <Counter
            key={counter.id}
            onDelete={this.handleDelete}
+           onIncrement={this.handleIncrement}
            counter={counter} //so that we can pass all info to counter component at one and not have to do value = counter.value etc.
            />
         ))}
