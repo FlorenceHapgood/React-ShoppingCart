@@ -13,7 +13,6 @@ class App extends Component {
     ]
   };
 
-
   handleIncrement = counter => { //counter is passed as an argument
     const counters = [...this.state.counters] //we can't change state directly
     const index = counters.indexOf(counter) // because counter is an argument
@@ -34,13 +33,20 @@ class App extends Component {
     const counters = this.state.counters.filter(c => c.id !== counterId);
     this.setState({counters: counters});
   };
-  
+
   render() {
     return (
       <React.Fragment>
-      <NavBar />
+      <NavBar
+        totalCounters={this.state.counters.filter(c => c.value > 0).length} //getting the values in array that are more than 0
+      />
       <main className="container">
-        <Counters />
+        <Counters
+          counters={this.state.counters} //this is to pass info about counters like id to child components
+          onReset={this.handleReset}
+          onIncrement={this.handleIncrement}
+          onDelete={this.handleDelete}
+        />
       </main>
       </React.Fragment>
     );
