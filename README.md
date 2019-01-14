@@ -1,12 +1,11 @@
 
 ## Goal
 
-To learn the basic fundamentals of React and build a shopping cart-type app
-(This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).)
+To learn the basic fundamentals of React and build a shopping cart-type app. 
 
 ## What I learnt
 
-I followed this great 2.5 hour tutorial https://hackr.io/tutorial/react-crash-course-2018-react-tutorial-with-examples
+I followed this great indepth tutorial https://hackr.io/tutorial/react-crash-course-2018-react-tutorial-with-examples
 
 I learnt about:
 - JSX
@@ -37,4 +36,5 @@ In the project directory, you can run:
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
