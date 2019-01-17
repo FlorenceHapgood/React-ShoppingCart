@@ -5,15 +5,15 @@ import React, { Component } from 'react';
 
 const NavBar = ({ totalCounters }) => { // so that we don't have to repeat this.props throughout code
 // we're picking the property of the props that we're interested in with totalCounters
-
-  <nav className="navbar navbar-light bg-light">
-    <a class="navbar-brand" href="#">
-    Navbar{" "}
-    <span className="badge badge-pill badge-secondary">
-      {totalCounters}
-    </span>
-    </a>
-  </nav>
+  return (
+    <nav className="navbar navbar-light bg-light">
+      <a class="navbar-brand" href="#">
+      Navbar{" "}
+      <span className="badge badge-pill badge-secondary">
+        {totalCounters}
+      </span>
+      </a>
+    </nav>
   );
 };
 
